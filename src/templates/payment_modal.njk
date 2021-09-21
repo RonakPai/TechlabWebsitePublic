@@ -1,0 +1,264 @@
+<!--------------------------
+  --  START PAYMENTS HTML --
+  --------------------------!>
+
+    <!-- Payment Modal -->
+<div
+  class="product-modal modal fade"
+  tabindex="-1"
+  role="dialog"
+  id="paymentModal"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form id="payment-form">
+        <div class="modal-header">
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="payment-title">Enroll</h4>
+        </div>
+        <div class="modal-body">
+          <div id="payment-chain-1">
+            <h5>Time</h5>
+            <div id="time-radios"></div>
+            <h5>Week</h5>
+            <div id="week-radios"></div>
+          </div>
+          <br />
+          <div class="form-group">
+            <input
+              name="your_name"
+              type="text"
+              class="form-control"
+              placeholder="Your Name"
+              id="your-name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              placeholder="Student Name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              name="age"
+              type="text"
+              class="form-control"
+              placeholder="Student Age"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              name="email"
+              type="text"
+              class="form-control"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Coupon Code"
+              id="coupon-input"
+			  style="width: 280px; display:inline-block"
+            />
+            <button
+              class="btn btn-main"
+			  id="apply_coupon"
+              style="background-color:#316698; color:#fff; font-size: 16px; padding:7px;"
+            >
+			  Apply Coupon
+			</button>
+      <h5 id = "coupon-successful"></h5>
+		  </div>
+          <div class="form-group">
+            <input
+              name="phone"
+              type="tel"
+              class="form-control"
+              placeholder="Phone Number"
+            />
+          </div>
+          <div id="payment-check" class="hidden">
+            <b>Paypal Checkout Confirmed!</b> Click Enroll to Continue
+          </div>
+          <div id="payment-section">
+            <div id="stripe-section">
+              <!-- <h5>Payment Option</h5>
+              <div id="option">
+                <label>
+                  <input
+                    id="one-time"
+                    type="radio"
+                    name="payment_method_radio"
+                    value="one-time"
+                  />
+                  <span id="one-time-price"></span>
+                </label>
+                <label>
+                  <input
+                    id="monthly"
+                    type="radio"
+                    name="payment_method_radio"
+                    value="monthly"
+                  />
+                  <span id="monthly-price"></span>
+                </label>
+              </div> -->
+              <div id="paypal-btn"></div>
+
+              {# <p style="margin-top: 15px;font-size: 15px;">
+                or Pay Using Credit Card using Stripe
+              </p> #}
+
+              {# <div id="card-element" style="">
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
+              <!-- <br />
+              <img src="images/card-icons/22.png" style="height: 30px;" />
+              <img src="images/card-icons/2.png" style="height: 30px;" />
+              <img src="images/card-icons/14.png" style="height: 30px;" />
+              <img src="images/card-icons/1.png" style="height: 30px;" />
+              <br />
+              <br /> -->
+              <span for="card-element" style="font-weight: 100;"
+                >We use
+                <a href="https://stripe.com/customers" target="_blank"
+                  >Stripe</a
+                >
+                to securely authenticate payments.
+              </span> #}
+              <div id="card-errors"></div>
+              {#
+              <p style="margin-top: 15px;font-size: 15px;">or</p>
+              #}
+            </div>
+            <!-- <label for="check-checkbox">
+              <input type="checkbox" id="check-checkbox" name="check" />
+              &nbsp;Pay by check
+            </label> -->
+          </div>
+          <br />
+          {#
+          <input
+            type="checkbox"
+            id="agree-checkbox"
+            name="agree_checkbox"
+            value="1"
+          />
+          <label for="agree-checkbox"
+            >I agree to the <a href="terms.html">Terms and Conditions</a></label
+          >
+          <label for="agree-checkbox" generated="true" class="error"></label> #}
+        </div>
+
+        <div
+          class="alert alert-danger alert-dismissible alert-common hidden fade in"
+          role="alert"
+          id="enroll-fail"
+        >
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>Uh Oh!</strong> Something went wrong! Please contact
+          info@techlabeducation.com for help.
+        </div>
+        <div id="payment-progress" class="hidden">
+          <center>
+            Loading...
+          </center>
+          <div class="load-bar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <span
+            style="font-size: 18px;padding:10px;"
+            id="payment-cost-data"
+          ></span>
+
+          <!--      <button type="button" class="btn btn-main" data-dismiss="modal" style="background-color: white; color: #316698; font-size: 16px; width:125px;padding:7px;">Close</button> -->
+          <button
+            type="submit"
+            class="btn btn-main"
+            style="background-color:#316698; color:#fff; font-size: 16px; width:125px;padding:7px;"
+          >
+            Enroll
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div
+  class="product-modal modal fade"
+  tabindex="-1"
+  role="dialog"
+  id="enroll-suc"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Success</h4>
+      </div>
+      <p align="center">
+        <br />
+        <strong>Thank You!</strong> You have successfully enrolled.
+        <br />
+        We will be emailing you a confirmation by email also.
+        <br />
+      </p>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-main"
+          data-dismiss="modal"
+          style="background-color: white; color: #316698; font-size: 16px; width:125px;padding:7px;"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!------------------------
+  --  END PAYMENTS HTML --
+  ------------------------!>
+
+<!--<div class="alert alert-success alert-dismissible alert-common hidden fade in" role="alert" id="enroll-suc">-->
+<!--<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+<!--<strong>Cool!</strong> Successfully enrolled! Enjoy!-->
+<!--</div>-->

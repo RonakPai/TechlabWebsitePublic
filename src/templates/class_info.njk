@@ -1,0 +1,129 @@
+{% import "payment_mixins.njk" as p %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    {% include "head_includes.njk" %} {% include "payment_css.njk" %}
+    <style>
+      .subtitle {
+        color: #ddd;
+      }
+      .main-block p {
+        font-size: 18px;
+      }
+      .enroll-btn-white button {
+        background-color: #fff !important;
+        color: #316698 !important;
+      }
+
+      .story {
+        display: flex;
+      }
+      .story aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+        flex: 50%;
+      }
+      .story aside p {
+        font-size: 18px;
+      }
+      .story aside blockquote {
+        border-color: #316698;
+      }
+      .story .story-img-container {
+        position: relative;
+        flex: 50%;
+        flex-direction: column;
+      }
+      .story .story-img-container img {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 50%;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    {% include "navbar.njk" %}
+
+    <section class="page-title {{ background }}">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <h1 style="font-weight: bolder;">{{ class_title }}</h1>
+              <h3 class="subtitle"><b>Grades: </b>{{ grades }}</h3>
+              <span class="enroll-btn-white">
+                {{ p.enroll_btn(class_id) }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "payment_modal.njk" %}
+
+    <section
+      class="about section"
+      style="display: flex; flex-direction: column; align-items: center"
+    >
+      <div class="container">
+        <h2 style="font-weight: bolder;" id = "prereqs">
+          Prerequisites:
+        </h2>
+        <ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+          {% block prereqs %} {% endblock %}
+        </ul>
+        <h2 style="font-weight: bolder;" id = "next-class">
+          Next Class:
+        </h2>
+        <ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+          {% block next_class %} {% endblock %}
+        </ul>
+        <img
+          src="{{ image_url }}"
+          style="max-width: 600px; width: 100%; border-radius: 20px; margin: 25px 0 25px 25px; float: right"
+        />
+        <div class="main-block">
+          {% block main %}
+          <h2>Class Overview:</h2>
+          {% endblock %}
+        </div>
+      </div>
+
+      <span class="enroll-btn">
+        {{ p.enroll_btn(class_id) }}
+      </span>
+        
+      {# <a
+        href="/fall.html"
+        class="btn btn-main animated fadeInUp"
+        style="margin: 3px 12px 3px 0px;font-weight: 900;border-radius: 5em;"
+        >More Fall Classes</a
+      > #}
+      <div class="block">
+      <a
+                href="/summer.html"
+                class="btn btn-main animated fadeInUp"
+                style="margin: 3px 12px 3px 0px;font-weight: 900;border-radius: 5em;"
+                >More Summer Classes</a
+              >
+      </div>
+    </section>
+    
+
+    {% include "footer.njk" %} {% include "jsincludes.njk" %} {% include
+    "payment_js.njk" %}
+  </body>
+</html>

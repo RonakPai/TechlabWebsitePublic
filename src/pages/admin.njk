@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin Page</title>
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <style>
+      .form-group {
+        display: inline-block;
+      }
+      span {
+        padding: 5px;
+        border-radius: 3px;
+      }
+      span.success {
+        background-color: #dff0d8;
+      }
+      span.warning {
+        background-color: #fcf8e3;
+      }
+      span.error {
+        background-color: #f2dede;
+      }
+    </style>
+  </head>
+  <body>
+    <!---------------->
+    <!-- Edit Modal -->
+    <!---------------->
+    <div
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      id="edit-modal"
+      data-backdrop="static"
+      data-keyboard="false"
+      data-show="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Edit Enrollment</h4>
+          </div>
+          <div class="modal-body" id="edit-modal-body">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-danger" id="delete-button">
+              Delete
+            </button>
+            <button type="button" class="btn btn-warning" id="update-button">
+              Update
+            </button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+
+    <!------------------->
+    <!-- Payment Modal -->
+    <!-- /.modal -------->
+    <div
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      id="login-modal"
+      data-backdrop="static"
+      data-keyboard="false"
+      data-show="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+          </div>
+          <div class="modal-body">
+            <input
+              id="login-email"
+              type="email"
+              class="form-control"
+              placeholder="Email"
+            /><br />
+            <input
+              id="login-password"
+              type="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <p id="login-error" style="color: red"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="login-button">
+              Login
+            </button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="container-fluid">
+      <h3>Techlab Admin Page</h3>
+
+      <hr />
+      <button class="btn btn-default" id="listall">List All Enrollments</button>
+      <button class="btn btn-danger" id="clear">Clear</button>
+      <label>Season:</label>
+      <select id="season"></select>
+      <label>Class:</label>
+      <select id="class"></select>
+      <label>Week:</label>
+      <select id="week"></select>
+      <span>
+        <input id="testing-mode-check" name="tm-check" type="checkbox" />
+        <label for="tm-check">Testing Mode</label>
+      </span>
+      <span>
+        <input id="deleted-mode-check" name="dm-check" type="checkbox" />
+        <label for="dm-check">Show Deleted Enrollments</label>
+      </span>
+
+      <hr />
+      <span class="error">Deleted Enrollment</span>
+      <span class="warning">Check</span>
+
+      <div id="enrolldata">
+        <table class="table table-striped table-condensed">
+          <thead class="thead-dark" id="table_head">
+            <tr>
+              <th>Parent Name</th>
+              <th>Parent Email</th>
+              <th>Student Age</th>
+              <th>Class</th>
+              <th>Enroll Date</th>
+              <th>Season</th>
+              <th>Student Name</th>
+              <th>Class Time</th>
+              <th>Class Week</th>
+              <th>Paid</th>
+            </tr>
+          </thead>
+          <tbody id="enrolltable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap 3.1 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <!--<script src="js/firebase.js"></script>-->
+    <script src="js/admin.js"></script>
+  </body>
+
+
+</html>

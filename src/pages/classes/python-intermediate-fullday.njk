@@ -1,0 +1,53 @@
+{% set background = "bg-6" %}
+{% set class_title = "Intermediate Python: Full Day Camp" %}
+{% set grades = "7+" %}
+{% set image_url = "/images/class%20images/python.jpg" %}
+{% set class_id="python-intermediate-fullday" %}
+
+{% extends "class_info.njk" %}
+
+{% block prereqs %}
+<li>Intro to Python</li>
+{% endblock %}
+
+{% block next_class %}
+<li>Intro to Java</li>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+<p>
+Full Day Python Camp for 2 weeks, learn Intermediate Python programming <b> and </b> develop coding muscle memory through
+practice problems. This class is an intermediate level python class. Students should have taken the Intro to Python class.
+</p>
+<p>
+Topics Covered: 
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Advanced data types, Strings, Arrays</li>
+<li> Nested and complex conditional loops</li>
+<b> <li> Core concepts reinforced through additional fun and practice projects in the afternoon </li></b>
+</ul>
+</p>
+<p>
+Outcome:
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Students independently develop a fully functional python game and get introduced to working with data and logic.</li>
+<b><li> Students sharpen their Python skills through challenge problems and discussions</li></b>
+</ul>
+</p>
+{# <p>
+Class Duration: 24 weeks, once a week for 1.5 hours </p>
+<p>
+Tuition: </p>
+<p>
+Fall: $630 (full session, pre-paid) </p><br>
+<p> Spring:$630 (full session, pre-paid)</p><br>
+<p> Or $240 paid in 3 installments(every 4 weeks)</p>      #}
+
+<p>
+<a href="/images/CurriculumPython.pdf">Python Curriculum Details</a>
+</p>
+<p>
+<a href="/faq.html#cancellationPolicy">Class Refund and Cancellation Policy</a>
+</p>
+{% endblock %}

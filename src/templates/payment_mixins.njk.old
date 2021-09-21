@@ -1,0 +1,56 @@
+{% macro enroll_btn(class) %}
+<button
+  class="btn btn-main enroll-button"
+  data-for-class="{{ class }}"
+  style="background-color: #5cc6cf; color:#fff; font-size: 20px;padding-right:1.25em;padding-left:1.25em;padding-top:0.25em;padding-bottom:0.25em;border-radius:5em;font-weight:900;margin-top:0.75em"
+>
+  enroll
+</button>
+{% endmacro %} {% macro read_btn(class_file) %}
+<a
+  type="button"
+  href="/classes/{{ class_file }}"
+  class="btn btn-main"
+  style="background-color: white; color: #316698; font-size: 16px;padding:7px;"
+  >READ MORE</a
+>
+{% endmacro %}
+{% macro theme_enroll_btn(class) %}
+<button
+  class="btn btn-main enroll-button"
+  data-for-class="{{ class }}"
+  style="background-color: #5cc6cf; color:#fff; font-size: 20px;padding-right:1.25em;padding-left:1.25em;padding-top:0.25em;padding-bottom:0.25em;border-radius:5em;font-weight:900;margin-top:0.75em"
+>
+  enroll
+</button>
+{% endmacro %} 
+
+{% macro theme_read_btn(class_file) %}
+<a
+  type="button"
+<!-- href="/classes/{{ class_file }}" -->
+  href="{{ class_file }}"
+  class="btn btn-main"
+  style="background-color: white; color: var(--theme-color); font-size: 16px;padding:7px;"
+  >READ MORE</a>
+  
+{% endmacro %} {% macro class_row(name, info, times, prereqs, nextclass,
+id, link) %}
+<div class="row class-row">
+  <div class="col-md-2">
+    <h3 class="class-name">{{ name }}</h3>
+  </div>
+  <div class="col-md-3 flex-left">
+    <p>{{ info }}</p>
+  </div>
+  <div class="col-md-2 flex-left">
+    <p><b>Times: </b>{{ times }}</p>
+  </div>
+  <div class="col-md-3 flex-left">
+    <p>
+      <b>Pre Reqs: </b>{{ prereqs }}<br /><b>Next Class: </b>{{ nextclass }}
+    </p>
+  </div>
+  <div class="col-md-2">{{ theme_enroll_btn(id) }}{{ theme_read_btn(link) }}</div>
+</div>
+{% endmacro %}

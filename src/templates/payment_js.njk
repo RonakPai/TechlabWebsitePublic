@@ -1,0 +1,15 @@
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js"
+  crossorigin
+></script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+  crossorigin
+></script>
+{% set TESTING_MODE = false %} {% if TESTING_MODE %}
+<script src="https://www.paypal.com/sdk/js?client-id=AfU-Fh-x-_1p5H8quILpztC6QveUin56K3oZ3qrPnSLKI2_gEjuI2LauYwQwnKs2y5RHFbTUwlO5oAJE"></script>
+{% else %}
+<script src="https://www.paypal.com/sdk/js?client-id=Ae-m0fB9fZpJcP9Z-fgtB_BtOVWUBSvE6C-ivSFFyE7eMNoRpsn-p_WOw-bdnZUrL80zADVpHJ_BOc6V"></script>
+{% endif %}
+<script src="https://js.stripe.com/v3/"></script>
+<script src="/js/payments.js"></script>

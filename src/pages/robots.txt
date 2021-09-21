@@ -1,0 +1,6 @@
+
+# Allow all bots to access everything but template pages
+User-agent: *
+Disallow: /template-pages/
+Disallow: /*.json$
+Allow: /

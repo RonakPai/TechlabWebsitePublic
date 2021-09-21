@@ -1,0 +1,53 @@
+{% set background = "bg-6" %}
+{% set class_title = "Intermediate Java: Full Day" %}
+{% set grades = "7+" %}
+{% set image_url = "/images/class%20images/python-code.jpg" %}
+{% set class_id="java-intermediate-fullday" %}
+
+{% extends "class_info.njk" %}
+
+{% block prereqs %}
+<li>Intro to Java</li>
+{% endblock %}
+
+{% block next_class %}
+<li>Advanced Java</li>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+<p>
+This is a full day camp for 2 weeks for Java explorers. Prior experience with Java is needed. Students should have taken 
+the Intro to Java class.
+</p>
+
+<p>
+Topics Covered: 
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Review of Java concepts</li>
+<li>Object-oriented programming</li>
+<li> Arrays & ArrayLists as Data Structures</li>
+<b> <li> Core concepts reinforced through additional fun and practice projects in the afternoon </li></b>
+</ul>
+</p>
+<p>
+Outcome:
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Students can independently develop a multi-class Java app</li>
+<b><li> Students sharpen their Java skills through challenge problems and discussions</li></b>
+</ul>
+</p>
+{# <p>
+Class Duration: 12 weeks, twice a week, 3 hours/week </p>
+<p>
+Tuition: <br>
+Fall: $1080 (12 week session, pre-paid) <br>
+Or $420 paid in 3 installments(every 4 weeks)</p>      #}
+
+<p>
+<a href="/images/CurriculumJava.pdf">Java Curriculum Details</a>
+</p>
+<p>
+<a href="/faq.html#cancellationPolicy">Class Refund and Cancellation Policy</a>
+</p>
+{% endblock %}

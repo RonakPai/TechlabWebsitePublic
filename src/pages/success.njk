@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    {% include "head_includes.njk" %}
+
+    <style>
+      .story {
+        display: flex;
+      }
+      @media all and (max-width: 1260px) {
+        .story {
+          flex-direction: column;
+        }
+      }
+      .story aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+        flex: 50%;
+      }
+      .story aside p {
+        font-size: 18px;
+      }
+      .story aside blockquote {
+        border-color: #316698;
+      }
+      .story .story-img-container {
+        position: relative;
+
+        flex: 50%;
+      }
+      .story .story-img-container button {
+        /* content: ""; */
+        background-color: white;
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-4rem, -4rem);
+        border: none;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+          0 15px 12px rgba(0, 0, 0, 0.22);
+        color: #316698;
+        font-size: 2.75rem;
+        text-align: center;
+        transition: background-color 0.25s ease-in-out;
+      }
+      .story .story-img-container button:hover {
+        background-color: #eee;
+      }
+
+      .story .story-img-container button:active {
+        background-color: #cdcdcd;
+      }
+      .story .story-img-container button::after {
+        content: '▶';
+        position: absolute;
+        left: 4rem;
+        top: 4rem;
+        transform: translate(-40%, -45%);
+      }
+      .story .story-img-container img {
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    {% include "navbar.njk" %}
+
+    <section class="page-title bg-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <h1 style="font-weight: bolder;">success stories</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="story-img-container">
+        <img
+          src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png"
+        />
+        <!-- TODO: Open Video Popup on click (javascript) -->
+        <button></button>
+      </div>
+      <aside>
+        <h1>John Doe</h1>
+        <p>
+          His first name was John, and his last name was Doe, and of this fact
+          he was quite proud, for the perfect placeholder name was his. He found
+          this out at TechLab Education. It changed his whole life
+        </p>
+        <p><strong>Path:</strong> Philosophy</p>
+        <blockquote>
+          "My name is John Doe and I have TechLab to thank for that."
+          <small>John Doe, 2019</small>
+        </blockquote>
+      </aside>
+    </section>
+
+    <section class="story">
+      <aside>
+        <h1>Johnny Doe</h1>
+        <p>
+          His first name was Johnny, and his last name was Doe, and of this fact
+          he became surprised and had an existential crisis.
+        </p>
+        <p><strong>Path:</strong> Philosophy – Advanced</p>
+        <blockquote>
+          "My name is Johnny Doe and I have existance to thank for that."
+          <small>Johnny Doe, 2019</small>
+        </blockquote>
+      </aside>
+      <div class="story-img-container">
+        <img
+          src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png"
+        />
+        <button></button>
+      </div>
+    </section>
+
+    <section class="story">
+      <div class="story-img-container">
+        <img
+          src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png"
+        />
+        <!-- TODO: Open Video Popup on click (javascript) -->
+        <button></button>
+      </div>
+      <aside>
+        <h1>John Doe</h1>
+        <p>
+          His first name was John, and his last name was Doe, and of this fact
+          he was quite proud, for the perfect placeholder name was his. He found
+          this out at TechLab Education. It changed his whole life
+        </p>
+        <p><strong>Path:</strong> Philosophy</p>
+        <blockquote>
+          "My name is John Doe and I have TechLab to thank for that."
+          <small>John Doe, 2019</small>
+        </blockquote>
+      </aside>
+    </section>
+
+    <section class="story">
+      <aside>
+        <h1>Johnny Doe</h1>
+        <p>
+          His first name was Johnny, and his last name was Doe, and of this fact
+          he became surprised and had an existential crisis.
+        </p>
+        <p><strong>Path:</strong> Philosophy – Advanced</p>
+        <blockquote>
+          "My name is Johnny Doe and I have existance to thank for that."
+          <small>Johnny Doe, 2019</small>
+        </blockquote>
+      </aside>
+      <div class="story-img-container">
+        <img
+          src="https://www.logistec.com/wp-content/uploads/2017/12/placeholder.png"
+        />
+        <button></button>
+      </div>
+    </section>
+
+    {% include "footer.njk" %} {% include "jsincludes.njk" %}
+  </body>
+</html>

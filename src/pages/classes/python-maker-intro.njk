@@ -1,0 +1,59 @@
+{% set background = "bg-6" %}
+{% set class_title = "Intro to Python & Intro to Electronics: Full Day Camp" %}
+{% set grades = "5+" %}
+{% set image_url = "/images/class%20images/python.jpg" %}
+{% set class_id="python-maker-intro" %}
+
+{% extends "class_info.njk" %}
+
+{% block prereqs %}
+<li>None</li>
+{% endblock %}
+
+{% block next_class %}
+<li>Intermediate Python</li>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+<p>
+This class is a Full Day Camp for first time programmers. No prior experience needed.
+<p>
+Topics Covered in Intro to Python:
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Logical and analytical thinking</li>
+<li> Writing pseudo-code and implementing in Python</li>
+<li> Data types, functions, loops, conditionals</li>
+</ul>
+</p>
+<p>
+Topics covered in Intro to Electronics:
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Intro to electronics using the open source <a href="https://arduino.cc" 
+target="blank">Arduino microcontroller & IDE</a> </li>
+<li> Hands-on engineering and maker skills</li>
+<li> Learn basics of wiring, motors and sensors</li>
+</ul>
+<p>
+Outcome:
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Students can independently develop a fully functional python project</li>
+<li> Students develop first maker project using Arduino and sensors</li>
+</ul>
+</p>
+{# <p>
+Class Duration: 12 weeks, once a week for 1.5 hours </p>
+<p>
+Tuition: $630 (full semester, pre-paid) or
+ $240 paid in 3 installments
+</p> #}
+<p>
+<a href="/images/CurriculumPython.pdf">Python Curriculum Details</a>
+</p>
+<p>
+<a href="/images/MakerSummer2019CourseWork.pdf">Maker Curriculum Details</a>
+</p>
+<p>
+<a href="/faq.html#cancellationPolicy">Class Refund and Cancellation Policy</a>
+</p>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% set background = "bg-6" %}
+{% set class_title = "Mobile Apps Intro" %}
+{% set grades = "5+" %}
+{% set image_url = "/images/class%20images/mobile-apps.jpg" %}
+{% set class_id="mobileAppsIntro" %}
+
+{% extends "class_info.njk" %}
+
+{% block prereqs %}
+<li>None</li>
+{% endblock %}
+
+{% block next_class %}
+<li>Intro to Python</li>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+<p>
+This class is an introduction to programming. Students develop their first mobile app using block-based programming in a tool kit from MIT's
+<a href="https://thunkable.com/" target="blank">Thunkable</a>.
+
+</p>
+<p>
+Learning Objectives: 
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Intro to analytic thinking and programming</li>
+<li> Basics of logic & event handlers</li>
+<li> Developing cross platform mobile apps (android/iOS)</li>
+</ul>
+</p>
+{# <p>
+Class Duration: 12 weeks, once a week for 1.5 hours </p>
+<p>
+Tuition: $630 (full semester, pre-paid) or
+ $240 paid in 3 installments
+</p> #}
+<p>
+<a href="/images/CurriculumIntroMobileApps.pdf">Mobile Apps Curriculum Details</a>
+</p>
+<p>
+<a href="/faq.html#cancellationPolicy">Class Refund and Cancellation Policy</a>
+{% endblock %}

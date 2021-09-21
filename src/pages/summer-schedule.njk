@@ -1,0 +1,431 @@
+{% import "payment_mixins.njk" as p %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    {% include "head_includes.njk" %} {% include "payment_css.njk" %}
+
+    <style>
+      .spanned-header {
+        writing-mode: sideways-lr;
+        text-orientation: mixed;
+      }
+      th {
+        line-break: loose;
+      }
+    </style>
+  </head>
+
+  <body id="body">
+    {% include "navbar.njk" %}
+
+    <section class="page-title bg-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="block">
+              <h1 style="font-weight: bolder;">summer enrollment</h1>
+              <h1 style="font-weight: bolder;">
+                Bay Area's #1 Coding and Design Camps
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "payment_modal.njk" %}
+
+    <section class="" style="background-color: white; padding: 2.5em 0 2.5em 0">
+      <div class="container">
+        <div class="row class-box" style="position: relative;">
+          <div class="col-md-3 col-sm-6">
+            <center>
+              <div class="service-item">
+                <i
+                  class="ion-ios-lightbulb-outline"
+                  style="font-size: 45px;"
+                ></i>
+                <h2 style="font-weight: bolder;">Coding</h2>
+                <p style="font-weight: bold; font-size: 18px;">Java, Python</p>
+                <p style="font-size: 16px;">
+                  Think, create & code like a programmer
+                </p>
+                <a
+                  href="programming.html"
+                  class="btn btn-main animated fadeInUp"
+                  style="background-color: #007bff; color: #ffffff; margin-bottom: 35px;"
+                  >learn more</a
+                >
+              </div>
+            </center>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <center>
+              <div class="service-item">
+                <i
+                  class="ion-ios-checkmark-outline"
+                  style="font-size: 45px;"
+                ></i>
+                <h2 style="font-weight: bolder;">Design</h2>
+                <p style="font-weight: bold; font-size: 18px;">Apps, Web</p>
+                <p style="font-size: 16px;">
+                  Design and develop your web and mobile apps
+                </p>
+                <a
+                  href="apps.html"
+                  class="btn btn-main animated fadeInUp"
+                  style="background-color: #007bff; color: #ffffff; margin-bottom: 35px;"
+                  >learn more</a
+                >
+              </div>
+            </center>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <center>
+              <div class="service-item">
+                <i class="ion-ios-star-outline" style="font-size: 45px;"></i>
+                <h2 style="font-weight: bolder;">Maker</h2>
+                <p style="font-weight: bold; font-size: 18px;">
+                  Pi, Arduino & more
+                </p>
+                <p style="font-size: 16px;">
+                  Tinker and make your own Internet device
+                </p>
+                <a
+                  href="maker.html"
+                  class="btn btn-main animated fadeInUp"
+                  style="background-color: #007bff; color: #ffffff; margin-bottom: 35px;"
+                  >learn more</a
+                >
+              </div>
+            </center>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <center>
+              <div class="service-item">
+                <i class="ion-ios-timer-outline" style="font-size: 45px;"></i>
+                <h2 style="font-weight: bolder;">StartupLab</h2>
+                <p style="font-weight: bold; font-size: 18px; color:#007bff">
+                  NEW! Popular
+                </p>
+                <p style="font-size: 16px;">
+                  Learn startup skills & change your community
+                </p>
+                <a
+                  href="startupLab.html"
+                  class="btn btn-main animated fadeInUp"
+                  style="background-color: #007bff; color: #ffffff; margin-bottom: 35px;"
+                  >learn more</a
+                >
+              </div>
+            </center>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 10px">
+      <div style="text-align: center;">
+        <div
+          style="display: flex; align-items: center; flex-direction: column;"
+        >
+          <h4>Beginner Classes</h4>
+          <table
+            class="table table-bordered table-striped"
+            style="max-width: 600px"
+          >
+            <thead>
+              <tr>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th></th>
+                <th>
+                  June<br />
+                  <small>
+                    Start Dates:<br />
+                    6/10, 6/17, 6/24
+                  </small>
+                </th>
+                <th>
+                  July<br />
+                  <small>
+                    Start Dates:<br />
+                    7/08, 7/15, 7/22, 7/29
+                  </small>
+                </th>
+                <th>
+                  Aug<br />
+                  <small>
+                    Start Date:<br />
+                    8/5
+                  </small>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="2" class="spanned-header">
+                  Full Day Camps
+                </th>
+                <th>
+                  Intro to Java
+                </th>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Python & Maker<br />
+                  Python & Mobile<br />
+                  Mobile & Maker
+                </th>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="4" class="spanned-header">
+                  Half Day Camps
+                </th>
+                <th>
+                  Intro to Java
+                </th>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Intro to Python
+                </th>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Intro to Mobile Apps<br />
+                  Intro to Web Design
+                </th>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Intro to Maker
+                </th>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div
+          style="display: flex; align-items: center; flex-direction: column;"
+        >
+          <h4>Advanced Classes</h4>
+          <table
+            class="table table-bordered table-striped"
+            style="max-width: 800px"
+          >
+            <thead>
+              <tr>
+                <th>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th></th>
+                <th>
+                  6/10-6/21
+                </th>
+                <th>
+                  6/24-7/12<br />
+                  (Closed 7/01-7/05)
+                </th>
+                <th>
+                  7/15-7/26
+                </th>
+                <th>
+                  7/29-8/09
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="spanned-header">
+                  Full Day Camps
+                </th>
+                <th>
+                  Java Intermediate / Advanced
+                </th>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+                <td>
+                  9-4 pm<br />
+                  4-6 pm
+                </td>
+              </tr>
+              <tr>
+                <th rowspan="4" class="spanned-header">
+                  Half Day Camps
+                </th>
+                <th>
+                  Intermediate Java<br />
+                  Intermediate Python
+                </th>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Advanced Java
+                </th>
+                <td>
+                  1-4 pm
+                </td>
+                <td>
+                  1-4 pm
+                </td>
+                <td>
+                  1-4 pm
+                </td>
+                <td>
+                  1-4 pm
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Intermediate Web Design<br />
+                  Intermediate Mobile Apps
+                </th>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  Maker Advanced | Raspberry Pi
+                </th>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+                <td>
+                  9-noon<br />
+                  1-4 pm
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    {% include "footer.njk" %} {% include "jsincludes.njk" %} {% include
+    "payment_js.njk" %}
+  </body>
+</html>

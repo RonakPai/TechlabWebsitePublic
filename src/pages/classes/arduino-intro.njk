@@ -1,0 +1,43 @@
+{% set background = "bg-6" %}
+{% set class_title = "Intro to Electronics" %}
+{% set grades = "5+" %}
+{% set image_url = "/images/arduino2.jpg" %}
+{% set class_id="arduino-intro" %}
+
+{% extends "class_info.njk" %}
+
+{% block prereqs %}
+<li>None</li>
+{% endblock %}
+
+{% block next_class %}
+<li>Intro to Python</li>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+<p>
+This class is an introduction to electronics and robotics. Students use the open source <a href="https://arduino.cc" target="blank">Arduino microcontroller & IDE</a>.
+
+</p>
+<p>
+Learning Objectives: 
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Intro to hands-on engineering and maker skills</li>
+<li> Basics of programming and logical thinking </li>
+<li> Learn basics of wiring, motors and sensors</li>
+<li> Build your first maker project at the end of class</li>
+</ul>
+</p>
+{# <p>
+Class Duration: 12 weeks, once a week for 1.5 hours </p>
+<p>
+Tuition: $630 (full semester, pre-paid) or
+ $240 paid in 3 installments
+</p> #}
+<p>
+<a href="/images/MakerSummer2019CourseWork.pdf">Maker Curriculum Details</a>
+</p>
+<p>
+<a href="/faq.html#cancellationPolicy">Class Refund and Cancellation Policy</a>
+{% endblock %}

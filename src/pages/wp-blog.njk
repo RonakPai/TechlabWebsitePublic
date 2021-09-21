@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    {% include "head_includes.njk" %}
+  </head>
+
+  <body id="body">
+    <div style="position: absolute; width: 100%">
+      {% include "navbar.njk" %}
+    </div>
+    <iframe
+      src="https://techlabeducation614368456.wordpress.com/"
+      style="width:100%;"
+      id="blog-frame"
+    ></iframe>
+
+    {% include "jsincludes.njk" %}
+
+    <script type="text/javascript">
+      $('#blog-frame').css('height', $(window).height());
+      $(window).on('resize', function() {
+        $('#blog-frame').css('height', $(window).height());
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{% set background = "bg-6" %}
+{% set class_title = "Javascript & Web App Development" %}
+{% set grades = "7+" %}
+{% set image_url = "/images/class%20images/javascript.jpeg" %}
+{% set class_id="modern-web" %}
+
+{% extends "class_info.njk" %}
+
+{% block prereqs %}
+<li>Java or Python</li>
+{% endblock %}
+
+{% block next_class %}
+<li>Intermediate Python or Java</li>
+{% endblock %}
+
+{% block main %}
+{{ super() }}
+<p>
+Topics Covered: 
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Javascript (JS) Syntax and usage w HTML/CSS</li>
+<li> Basics of Object-oriented programming using JS, DOM scripting, Forms & validation, JQuery, Graphics & Animations w JS</li>
+</ul>
+</p>
+<p>
+Outcome:
+<ul style="list-style: disc; margin: 0 0 25px 35px; font-size: 18px">
+<li> Students can independently develop Javascript projects including personal web page, online game using graphics</li>
+</ul>
+</p>
+<p>
+Class Duration: 12 weeks, once a week for 1.5 hours </p>
+<p>
+Tuition: $630 (full semester, pre-paid) or
+ $240 paid in 3 installments
+ </p>
+ <p>
+<a href="https://techlab.education/wp-blog.html">Read our blog post on why kids should learn Javascript.</a>
+</p>
+<p>
+<a href="/images/CurriculumJavascript.pdf">Javascript Curriculum Details</a>
+</p>
+<p>
+<a href="/faq.html#cancellationPolicy">Class Refund and Cancellation Policy</a>
+</p>
+{% endblock %}
+
+
+

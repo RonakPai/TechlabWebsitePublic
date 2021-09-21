@@ -1,0 +1,131 @@
+{% set background = "bg-6" %}
+{% set class_title = "StartupLab" %}
+{% set grades = "7+" %}
+{% set image_url = "/images/startupLabSchedule.jpg" %}
+{% set class_id="startuplab" %}
+
+{% extends "class_info.njk" %}
+
+{% block main %}
+{{ super() }}
+  <script>
+    document.getElementById("prereqs").remove();
+    document.getElementById("next-class").remove();
+  </script>
+  <p>
+  This is a 4-week workshop to inspire the next Entrepreneurs and Innovators </p>
+
+
+  <h3 class="card-title text-primary">
+    <strong>Business & Marketing Skills</strong>
+  </h3>
+  <p>
+    Learn project ideation, business planning & real world marketing
+    skills to solve a community challenge or create your own business.
+  </p>
+  <h3 class="card-title text-primary"><strong>World Class Mentoring</strong></h3>
+  <p>
+    Coaching, workshops, and inspiring talks from role models across the industry. Featuring
+    mentors from world’s top companies, including <b> Google, Facebook,
+    Amazon, Microsoft, Genentech </b> and leading innovators from <b>Stanford
+    and Berkeley. </b>
+  </p>
+
+  <h3 class="card-title text-primary">
+    <strong>Technology Skills & Prototyping</strong>
+  </h3>
+  <p>
+    Learn by creating your own web or mobile apps. 
+    We will teach you the skills necessary to build a web or mobile app using technology in the
+    context of creating your own business. Sample projects include
+    Covid-data tracking, food recipes, games & more. Come
+    <a href="/MeetUs.html" target="_blank">talk to us</a> if you have
+    your own passionate project.
+  </p>
+  <h3 class="card-title text-primary">
+    <strong>Pitch Competition</strong>
+  </h3>
+  <p>
+    At the end of the program, compete in a final pitch 
+    competition delivered to a panel of experienced judges from the
+    investor community. Sharpen your presentation and communication
+    skills and get feedback from real industry leaders.
+  </p>
+
+  <h3 id="BootCamp Dates" class="card-title text-primary">
+    <strong>Workshop Sessions</strong>
+  </h3>
+  <p>
+  
+  Session 1: June 8 through July 2 </p>
+  <p>
+    4-week long camps in the morning (9-noon).
+  </p>
+  <p>
+    Limited seats and open to all students on first-come-first-served
+    basis. Students may be asked to participate in pre-workshop
+    discussions.
+  </p>
+
+  
+  <h1 style="text-align:center; padding-top: 20px; padding-bottom: 50px;">Example Projects</h1>
+  <h1 style="text-align:center;">Trouver</h1>
+  <section class="story">
+      <div class="story-img-container">
+        <img
+          src="/images/trouver.png"
+        />
+      </div>
+      <aside>
+        
+        <p>
+          High schoolers often gain money by doing odd jobs, such as mowing the lawn,
+         babysitting, tutoring, walking the dog, etc. Parents or employers also hire 
+         people to do these jobs for them; however, they pay much more to a professional
+          than they would to a high schooler. Trouver connects parents or employers to these
+           high schoolers, allowing them both to benefit.
+        </p>
+        <p><strong>Path:</strong> Mobile App</p>
+        <blockquote>
+          "I wanted to thank you for making the camp such a unique experience for me. 
+          I learned so much about starting a business, everything that goes into 
+          preparing for the release, and iterating with the idea. 
+          I had a blast, and I will be sure to recommend it to my friends."
+          <small>High Schooler at Castilleja High School, 2019</small>
+        </blockquote>
+      </aside>
+    </section>
+
+    <h1 style="text-align:center;">Phone by Mako</h1>
+    <section class="story" style = "padding-bottom: 25px;">
+      <aside>
+        
+        <p>
+          Ninety-one percent of kids ages 13 through 17 either have or have 
+          access to a phone. Hardly any kids know how phones work, and over 
+          75 percent of kids were interested in learning how phones work.
+          Additionally, most smartphones come with only two ports, 
+          if not one, which limits upgradeability and the ability to add onto 
+          your phone. Introducing the Phone by Mako. It’s a simple, do it 
+          yourself phone that teaches young makers and entrepreneurs how phones 
+          work. The kit also promotes kids’ creativity, as it allows them to choose 
+          the color of the phone, add sensors and other components, and even make 
+          their own case for it. 
+
+
+        </p>
+        <p><strong>Path:</strong> Maker</p>
+        <blockquote>
+          "Quality of presenters, guest speakers was amazing. I felt like I was at Google X! 
+          <small>Middle Schooler, 2019</small>
+        </blockquote>
+      </aside>
+      <div class="story-img-container">
+        <img
+          src="/images/mako-phone.jpg"
+        />
+      </div>
+    </section>
+
+
+{% endblock %}
